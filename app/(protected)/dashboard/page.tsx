@@ -26,7 +26,8 @@ export default function DashboardPage() {
   }
 
   return (
-    <ProtectedRoute allowedRoles={['admin', 'manager', 'user']}>
+    <>
+      // {/* <ProtectedRoute allowedRoles={['admin', 'manager', 'user']}> */}
       <Box p={4} display="grid" gridTemplateColumns={{ xs: '1fr', md: 'repeat(3, 1fr)' }} gap={3}>
         {/* Common user card */}
         <Card sx={{ borderRadius: 3, boxShadow: 3 }}>
@@ -72,6 +73,7 @@ export default function DashboardPage() {
           </Card>
         )}
       </Box>
-    </ProtectedRoute>
+      // {/* </ProtectedRoute> */}
+    </>
   );
 }

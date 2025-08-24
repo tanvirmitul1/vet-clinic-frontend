@@ -16,7 +16,9 @@ export default function LoginPage() {
     e.preventDefault();
     try {
       await login({ email, password }).unwrap();
+      console.log('Login successful');
       router.push('/dashboard');
+      console.log('Login successful2');
     } catch (err: any) {
       setError(err.data?.message || 'Login failed');
     }
